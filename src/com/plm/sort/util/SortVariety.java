@@ -7,5 +7,6 @@ package com.plm.sort.util;
  */
 public enum SortVariety {
 	bubble,//冒泡 
-	selection;//选择
+	selection,//选择
+	insertion;//插入
 }
