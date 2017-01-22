@@ -14,4 +14,10 @@ public interface Sort {
 	 * @param type 是升序排序还是降序排序
 	 */
 	public void sort(int[] array, SortType type);
+	
+	/**
+	 * 默认排序方法
+	 * @param array
+	 */
+	public void sort(int[] array);
 }

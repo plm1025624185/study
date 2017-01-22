@@ -47,4 +47,9 @@ public class BubbleSort extends BaseSort {
 	public void sortDesc(int[] array){
 		
 	}
+
+	@Override
+	public void sort(int[] array) {
+		sort(array, SortType.asc);
+	}
 }

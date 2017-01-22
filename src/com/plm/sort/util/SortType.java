@@ -7,5 +7,6 @@ package com.plm.sort.util;
  *
  */
 public enum SortType {
-	asc, desc;
+	asc,//升序
+	desc;//降序
 }
