@@ -3,6 +3,7 @@ package com.plm.factory;
 import com.plm.sort.base.Sort;
 import com.plm.sort.imp.BubbleSort;
 import com.plm.sort.imp.InsertionSort;
+import com.plm.sort.imp.QuickSort;
 import com.plm.sort.imp.SelectionSort;
 import com.plm.sort.util.SortVariety;
 
@@ -41,6 +42,8 @@ public class SortFactory {
 			return new SelectionSort();
 		}else if(variety == SortVariety.insertion){
 			return new InsertionSort();
+		}else if(variety == SortVariety.quick){
+			return new QuickSort();
 		}else{
 			return null;
 		}
