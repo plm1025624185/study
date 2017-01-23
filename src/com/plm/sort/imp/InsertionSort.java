@@ -43,7 +43,7 @@ public class InsertionSort extends BaseSort {
 	 * 升序排序
 	 * @param array
 	 */
-	public void sortAsc(int[] array){
+	private void sortAsc(int[] array){
 		for(int i = 0; i < array.length - 1; i++){
 			int j = i;
 			while(j >= 0 && array[j + 1] < array[j]){
@@ -57,7 +57,7 @@ public class InsertionSort extends BaseSort {
 	 * 降序排序
 	 * @param array
 	 */
-	public void sortDesc(int[] array){
+	private void sortDesc(int[] array){
 		
 	}
 }

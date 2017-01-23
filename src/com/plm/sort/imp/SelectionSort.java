@@ -33,7 +33,7 @@ public class SelectionSort extends BaseSort {
 	 * 进行升序排序
 	 * @param array
 	 */
-	public void sortAsc(int[] array){
+	private void sortAsc(int[] array){
 		for(int i = 0; i < array.length - 1; i++){
 			for(int j = i; j < array.length; j++){
 				if(array[i] > array[j]){
@@ -47,7 +47,7 @@ public class SelectionSort extends BaseSort {
 	 * 进行降序排序
 	 * @param array
 	 */
-	public void sortDesc(int[] array){
+	private void sortDesc(int[] array){
 		
 	}
 

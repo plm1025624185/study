@@ -29,7 +29,7 @@ public class BubbleSort extends BaseSort {
 	 * 进行升序排序
 	 * @param array
 	 */
-	public void sortAsc(int[] array){
+	private void sortAsc(int[] array){
 		for(int i = 0; i < array.length - 1; i++){
 			for(int j = 0; j < array.length - 1 - i; j++){
 				//当前一个大于后一个时，则进行交换
@@ -44,7 +44,7 @@ public class BubbleSort extends BaseSort {
 	 * 进行降序排序
 	 * @param array
 	 */
-	public void sortDesc(int[] array){
+	private void sortDesc(int[] array){
 		
 	}
 
