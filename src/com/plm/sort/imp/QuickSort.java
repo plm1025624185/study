@@ -36,7 +36,7 @@ public class QuickSort extends BaseSort {
 	public void sort(int[] array, SortType type) {
 		if(type == SortType.asc){
 			sortAsc(array);
-		}else{
+		}else if(type == SortType.desc){
 			sortDesc(array);
 		}
 	}
