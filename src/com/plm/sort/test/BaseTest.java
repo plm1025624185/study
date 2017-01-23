@@ -17,7 +17,7 @@ public abstract class BaseTest {
 	@Before
 	public void init(){
 		sort = createSort();
-		array = new int[20];
+		array = new int[getArrayLength()];
 		for(int i = 0; i < array.length; i++){
 			array[i] = (int)(Math.random()*100); 
 		}
@@ -45,5 +45,13 @@ public abstract class BaseTest {
 		printArray(array);
 		sort.sort(array);
 		printArray(array);
+	}
+	
+	/**
+	 * 获取测试数组的长度，子类要改变长度可以进行重写
+	 * @return
+	 */
+	protected int getArrayLength(){
+		return 20;
 	}
 }
