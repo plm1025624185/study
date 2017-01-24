@@ -52,6 +52,6 @@ public abstract class BaseTest {
 	 * @return
 	 */
 	protected int getArrayLength(){
-		return 20;
+		return 10;
 	}
 }
