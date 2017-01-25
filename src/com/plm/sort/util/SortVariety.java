@@ -14,5 +14,7 @@ public enum SortVariety {
 	
 	quick,//快速排序
 	
-	merge;//归并排序
+	merge,//归并排序
+	
+	heap,//堆排序
 }

@@ -2,6 +2,7 @@ package com.plm.factory;
 
 import com.plm.sort.base.Sort;
 import com.plm.sort.imp.BubbleSort;
+import com.plm.sort.imp.HeapSort;
 import com.plm.sort.imp.InsertionSort;
 import com.plm.sort.imp.MergeSort;
 import com.plm.sort.imp.QuickSort;
@@ -47,6 +48,8 @@ public class SortFactory {
 			return new QuickSort();
 		}else if(variety ==  SortVariety.merge){
 			return new MergeSort();
+		}else if(variety ==  SortVariety.heap){
+			return new HeapSort();
 		}else{
 			return null;
 		}
