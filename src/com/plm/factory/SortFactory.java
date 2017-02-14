@@ -2,6 +2,7 @@ package com.plm.factory;
 
 import com.plm.sort.base.Sort;
 import com.plm.sort.imp.BubbleSort;
+import com.plm.sort.imp.CountSort;
 import com.plm.sort.imp.HeapSort;
 import com.plm.sort.imp.InsertionSort;
 import com.plm.sort.imp.MergeSort;
@@ -50,7 +51,10 @@ public class SortFactory {
 			return new MergeSort();
 		}else if(variety ==  SortVariety.heap){
 			return new HeapSort();
-		}else{
+		}else if(variety == SortVariety.count){
+			return new CountSort();
+		}
+		else{
 			return null;
 		}
 	}

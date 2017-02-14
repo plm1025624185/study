@@ -17,4 +17,6 @@ public enum SortVariety {
 	merge,//归并排序
 	
 	heap,//堆排序
+	
+	count,//计数排序
 }
