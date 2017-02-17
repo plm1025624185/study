@@ -8,6 +8,7 @@ import com.plm.sort.imp.InsertionSort;
 import com.plm.sort.imp.MergeSort;
 import com.plm.sort.imp.QuickSort;
 import com.plm.sort.imp.SelectionSort;
+import com.plm.sort.imp.ShellSort;
 import com.plm.sort.util.SortVariety;
 
 /**
@@ -53,6 +54,8 @@ public class SortFactory {
 			return new HeapSort();
 		}else if(variety == SortVariety.count){
 			return new CountSort();
+		}else if(variety == SortVariety.shell){
+			return new ShellSort();
 		}
 		else{
 			return null;

@@ -19,4 +19,6 @@ public enum SortVariety {
 	heap,//堆排序
 	
 	count,//计数排序
+	
+	shell,//希尔排序
 }
