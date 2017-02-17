@@ -45,8 +45,8 @@ public class ShellSort extends BaseSort {
 				for(int j = i + gap; j < array.length; j += gap){
 					int temp = j;
 					while(array[temp] < array[temp - gap]){
-						swap(array, temp, temp -gap);
-						temp = temp -gap;
+						swap(array, temp, temp - gap);
+						temp = temp - gap;
 						if(temp == i){
 							break;
 						}
