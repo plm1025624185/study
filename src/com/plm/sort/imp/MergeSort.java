@@ -38,10 +38,7 @@ public class MergeSort extends BaseSort {
 	 * @param array
 	 */
 	private void sortAsc(int[] array){
-		int[] tmp = sortAsc(array, 0, array.length - 1);
-		for(int i = 0; i < array.length; i++){
-			array[i] = tmp[i];
-		}
+		sortAscBetter(array, 0, array.length - 1);
 	}
 	
 	private int[] sortAsc(int[] array, int start, int end){
@@ -69,6 +66,33 @@ public class MergeSort extends BaseSort {
 			int[] right = sortAsc(array, did, end);
 			//分好组后就进行合并
 			return combine(left, right);
+		}
+	}
+	
+	/**
+	 * 代码进行改善
+	 * @param array
+	 * @param start
+	 * @param end
+	 * @return 现返回值用来存开始结束的索引
+	 */
+	private int[] sortAscBetter(int[] array, int start, int end){
+		//首先判断当前是否已经分配到最细，即只有一个值
+		if(end - start == 0){
+			//如果是最细的就直接返回开始的索引
+			return new int[]{start, end};
+		}else if(end - start == 1){
+			//当分组出来只有两个值时，可以直接比较
+			if(array[start] > array[end]){
+				swap(array, start, end);
+			}
+			return new int[]{start, end};
+		}else{
+			//进行归类分组
+			int did = (end - start + 1)/2;
+			int[] left = sortAscBetter(array, start, did - 1);
+			int[] right = sortAscBetter(array, did, end);
+			return combineBetter(array, left, right);
 		}
 	}
 	
@@ -107,6 +131,28 @@ public class MergeSort extends BaseSort {
 			}
 		}
 		return newArray;
+	}
+	
+	/**
+	 * 进行合并
+	 * @param array 源数组
+	 * @param suba 左数组的开始结束索引
+	 * @param subb 右数组的开始结束索引
+	 * @return
+	 */
+	private int[] combineBetter(int[] array, int[] suba, int[] subb){
+		 //这时只需右边的进行插入排序即可
+		for(int i = subb[0]; i <= subb[1]; i++){
+			int temp = i;
+			while(array[temp] < array[temp - 1]){
+				swap(array, temp, temp - 1);
+				temp = temp - 1;
+				if(temp == suba[0]){
+					break;
+				}
+			}
+		}
+		return new int[]{suba[0], subb[1]};
 	}
 
 	/**

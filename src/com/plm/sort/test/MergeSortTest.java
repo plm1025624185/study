@@ -14,6 +14,6 @@ public class MergeSortTest extends BaseTest {
 
 	@Override
 	protected int getArrayLength() {
-		return 5;
+		return 4;
 	}
 }
