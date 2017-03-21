@@ -21,4 +21,6 @@ public enum SortVariety {
 	count,//计数排序
 	
 	shell,//希尔排序
+	
+	radix,//基数排序
 }
